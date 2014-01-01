@@ -7,8 +7,8 @@
 		//Define vars in here
 	};
 	
-	Bookmarklet.main = function() {
-		console.log('bookmarklet main');
+	Bookmarklet.run = function() {
+		console.log('bookmarklet run');
 
 	};
 
@@ -18,11 +18,11 @@
 		if (!($ = window.jQuery)) { // typeof jQuery=='undefined' works too  
 			script = document.createElement( 'script' );  
 			script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js';   
-		    script.onload = Bookmarklet.main;  
+		    script.onload = Bookmarklet.run;  
 		    document.body.appendChild(script);
 		}   
 		else {  
-		    Bookmarklet.main();
+		    Bookmarklet.run();
 		}
 	};
 
