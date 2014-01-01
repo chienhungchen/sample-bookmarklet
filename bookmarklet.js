@@ -9,7 +9,7 @@
 	
 	Bookmarklet.run = function() {
 		console.log('bookmarklet run');
-
+		Bookmarklet.init();
 	};
 
 	Bookmarklet.init = function(){
