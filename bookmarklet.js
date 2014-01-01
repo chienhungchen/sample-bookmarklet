@@ -26,6 +26,10 @@
 		}
 	};
 
+	//Expose it to global
+	root.Bookmarklet5982 = Bookmarklet;
 
+	//Self-init
+	Bookmarklet.init();
 
 })(this);
