@@ -1,3 +1,8 @@
+/*
+TODO:
+	- Need to figure out how to do jQuery.noConflict() correctly	
+
+*/
 (function(root, undefined){
 	'use strict';
 
@@ -9,7 +14,8 @@
 	
 	Bookmarklet.run = function() {
 		console.log('bookmarklet run');
-		Bookmarklet.init();
+		if(!($ = window.jQuery)) Bookmarklet.init(); //Double check to see if $ is available
+
 	};
 
 	Bookmarklet.init = function(){
@@ -21,7 +27,7 @@
 		    script.onload = Bookmarklet.run;  
 		    document.body.appendChild(script);
 		}   
-		else {  
+		else {
 		    Bookmarklet.run();
 		}
 	};
